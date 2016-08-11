@@ -23,7 +23,7 @@ public class start_activity extends Activity {
             @Override
             public void onFinish(){
                 Intent intent = new Intent();
-                intent.setClassName("ru.vshilin","ru.vshilin.MapActivity");
+                intent.setClassName("ru.vshilin.shaverma_patrol","ru.vshilin.shaverma_patrol.MapActivity");
                 startActivity(intent);
 
                 finish();

@@ -88,4 +88,8 @@ public class ImageBalloonItem extends BalloonItem implements OnBalloonListener{
     public Shaverma getShaverma() {
         return shava;
     }
+
+    public int compareTo(Object  obj) {
+        return 0;
+    };
 }
