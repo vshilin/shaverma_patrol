@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Шаверма Патруль</string>
+    <string name="app_name_head">Шаверма Патруль</string>
+    <string name="rating_suffix">из 5</string>
+
+
+    <string name="demo_min_label"></string>
+    <string name="demo_max_label"></string>
+</resources>
+
