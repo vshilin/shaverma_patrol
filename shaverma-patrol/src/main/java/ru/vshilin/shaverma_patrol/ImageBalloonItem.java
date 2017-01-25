@@ -89,7 +89,7 @@ public class ImageBalloonItem extends BalloonItem implements OnBalloonListener{
         return shava;
     }
 
-    public int compareTo(Object  obj) {
+    /*public int compareTo(Object  obj) {
         return 0;
-    };
+    };*/
 }

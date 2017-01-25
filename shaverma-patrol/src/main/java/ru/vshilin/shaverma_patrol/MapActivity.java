@@ -8,12 +8,17 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import ru.yandex.yandexmapkit.*;
 import ru.yandex.yandexmapkit.overlay.Overlay;
 import ru.yandex.yandexmapkit.overlay.OverlayItem;
@@ -52,8 +57,15 @@ public class MapActivity extends Activity  {
 
         setContentView(R.layout.sample);
 
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3940256099942544~3347511713");
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         final MapView mapView = (MapView) findViewById(R.id.map);
-        mapView.showBuiltInScreenButtons(true);
+        //mapView.showBuiltInScreenButtons(true);
+        mapView.showFindMeButton(true);
 
         filter = (ImageView) findViewById(R.id.filter);
         filter.setOnClickListener(new View.OnClickListener() {
